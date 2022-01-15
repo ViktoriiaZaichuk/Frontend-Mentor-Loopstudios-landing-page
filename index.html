@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/main.css">
+
+  <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container flex flex-ai-c flex-jc-sb">
+      <div class="logo">
+        <img src="images/logo.svg" alt="Logo">
+      </div>
+
+      <div id="menuBtn" class="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="mobile-menu-active flex flex-ai-c">
+        <ul class="flex flex-fd-c flex-jc-c">
+          <li><a href="">About</a></li>
+          <li><a href="">Careers</a></li>
+          <li><a href="">Events</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Support</a></li>
+        </ul> 
+      </div>
+      
+      <!-- DESKTOP MENU -->
+      <div class="main-menu">
+        <ul class="flex flex-ai-c">
+          <li><a href="">About</a></li>
+          <li><a href="">Careers</a></li>
+          <li><a href="">Events</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Support</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero flex container">
+      <h1>Immersive <br> experiences <br> that deliver</h1>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- INTERACTIVE VR -->
+    <section id="about" class="container">
+      <div class="interactive">
+        <div class="interactive-img">
+          <img src="./images/mobile/image-interactive.jpg" alt="Leader interactive VR">
+        </div>
+        <div class="interactive-txt">
+          <h2>The leader in interactive VR</h2>
+          <p>Founded in 2011, Loopstudios has been producing world-class virtual reality 
+            projects for some of the best companies around the globe. Our award-winning 
+            creations have transformed businesses through digital experiences that bind 
+            to their brand.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR CREATIONS -->
+    <section id="products" class="container">
+      <div class="creations">
+        <h2>Our creations</h2>
+
+        <button>See all</button>
+
+        <!-- GALLERY -->
+        <div class="creations-deepearth">
+          <a href="">
+            <h3>Deep earth</h3>
+          </a>
+        </div>
+
+        <div class="creations-nightarcade">
+          <a href="">
+            <h3>Night arcade</h3>
+          </a>
+        </div>
+
+        <div class="creations-soccerteam">
+          <a href="">
+            <h3>Soccer team VR</h3>
+          </a>
+        </div>
+
+        <div class="creations-thegrid">
+          <a href="">
+            <h3>The grid</h3>
+          </a>
+        </div>
+
+        <div class="creations-fromup">
+          <a href="">
+            <h3>From up above VR</h3>
+          </a>
+        </div>
+
+        <div class="creations-pocketborealis">
+          <a href="">
+            <h3>Pocket borealis</h3>
+          </a>
+        </div>
+
+        <div class="creations-curiosity">
+          <a href="">
+            <h3>The curiosity</h3>
+          </a>
+        </div>
+
+        <div class="creations-makeit">
+          <a href="">
+            <h3>Make it fisheye</h3>
+          </a>
+        </div>
+      </div>
+ 
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer container">
+      <!-- LOGO -->
+      <div class="footer-logo flex flex-jc-c">
+        <img src="images/logo.svg" alt="Logo">
+      </div>
+  
+      <!-- NAVIGATION -->
+      <div class="footer-navigation">
+        <ul class="flex flex-ai-c flex-fd-c">
+          <li><a href="">About</a></li>
+          <li><a href="">Careers</a></li>
+          <li><a href="">Events</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="footer-social">
+        <ul class="flex flex-ai-c flex-jc-c">
+          <li><a href=""><img src="images/icon-facebook.svg" alt="Facebook"></a></li>
+          <li><a href=""><img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+          <li><a href=""><img src="images/icon-pinterest.svg" alt="Pinterest"></a></li>
+          <li><a href=""><img src="images/icon-instagram.svg" alt="Instagram"></a></li>
+        </ul>
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div class="footer-copyright flex flex-jc-c">
+        <p>© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://vikazaichuk.com/">Vika Zaichuk</a>.
+  </div>
+
+  <script src="./app/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* HEADER */
+body {
+    &.open {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        overflow: hidden;
+    }
+}
+header {
+    min-height: 100vh;
+    background-image: url("../../images/mobile/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    @include screenMax768 {
+        background-image: url("../../images/desktop/image-hero.jpg");
+    }
+    & nav {
+        padding-top: 2rem;
+        width: 100%;
+        & .logo {
+            position: relative;
+            z-index: 11;
+        }
+        & li {
+            & a {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: $white;
+                    height: .2rem;
+                    top: 150%;
+                    left: 50%; 
+                    transform-origin: center;
+                    transform: translate(-50%, -50%); 
+                    transition: all 200ms ease-in-out;
+                }
+                &:hover::after {
+                    animation: underlineNav .2s linear forwards;
+                }
+            }
+        }
+
+        & .mobile-menu {
+            height: 2rem;
+            cursor: pointer;
+            position: relative;
+            padding: 0 1.5rem;
+            z-index: 11;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            @include screenMax768 {
+                display: none;
+            }
+            & span {
+            display: block;
+            position: absolute;
+            height: 1.5px;
+            width: 2.4rem;
+            background-color: $white;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+            }
+            & span:nth-child(1) {
+                top: 0px;
+            }
+            & span:nth-child(2) {
+                top: 10px;
+            }
+            & span:nth-child(3) {
+                top: 20px;
+            }
+        }
+        & .mobile-menu-active {
+            position: absolute;
+            width: 100vw;
+            width: 100%;
+            height: 100%;
+            right: 0;
+            top: 0;
+            overflow: scroll;
+            overflow-x: hidden;
+            visibility: hidden;
+            background-color: $black;
+            z-index: 10;
+            padding: 1rem;
+            & ul {
+                font-size: 2.5rem;
+                font-family: $displayFont;
+                height: 100%;
+                padding: 3rem;
+                margin-bottom: 2rem;
+                & li {
+                    margin: 1.5rem 0;
+                    & a {
+                        color: $white;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        &.open {
+            .mobile-menu-active {
+                visibility: visible;
+                left: 0;
+            }
+            .mobile-menu{
+                & span:nth-child(1) {
+                    top: 10px;
+                    transform: rotate(135deg);
+                }
+                & span:nth-child(2) {
+                    opacity: 0;
+                    left: -20px;
+                }
+                & span:nth-child(3) {
+                    top: 10px;
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+        
+        & .main-menu {
+            display: none;
+            @include screenMax768 {
+                display: flex;
+            }
+            & li {
+                margin: 0 2rem;
+            }
+            & a {
+                color: $white;
+            }
+            & button {
+                display: inline-block;
+                background-color: $white;
+
+                padding: 1.5rem 2rem;
+                text-transform: uppercase;
+                font-family: $displayFont;
+                border: none;
+                border-radius: 2.2rem;
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.404);
+                    color: $white;
+                }
+            }
+
+        }
+    }
+    & .hero {
+        color: $white;
+        flex: 1;
+        align-content: flex-start;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        & h1 {
+            text-transform: uppercase;
+            font-size: 4rem;
+            letter-spacing: .5rem;
+            border: $white solid .2rem;
+            padding: 2rem;
+            display: inline-block;
+            @include screenMax768 {
+                font-size: 7rem;
+                width: auto;
+            }
+        }
+    }
+}
+
+/* HOVER LINKS NAV */
+@keyframes underlineNav {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

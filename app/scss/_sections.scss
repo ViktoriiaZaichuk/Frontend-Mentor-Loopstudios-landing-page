@@ -1,0 +1,107 @@
+/* SERVICES */
+
+
+
+/* ABOUT SECTION */
+.interactive {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    @include screenMax768 {
+        grid-template-columns: 1fr .5fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    &-img {
+        grid-row: 1/-1;
+        grid-column: 1/3;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        @include screenMax768 {
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        img {
+            height: auto;
+            max-width: 100%;
+            display: block;
+            @include screenMax768 {
+                width: auto;
+            }
+        }
+    }
+    &-txt {
+        background-color: $white;
+        padding: 4rem 4rem 0 4rem;
+        grid-row: 2;
+        grid-column: 2/-1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include screenMax768 {
+            justify-content: flex-end;
+            align-items: center;
+            text-align: left;
+        }
+        h2 {
+            margin-bottom: 2rem;
+            font-size: 3rem;
+        }
+        p {
+            color: $darkGray;
+            max-width: 80%;
+            @include screenMax768 {
+                text-align: left
+            }
+        }
+    }
+}
+
+
+/* OUR CREATIONS SECTION */
+.creations {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    @include screenMax768 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 6fr 6fr;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        text-align: center;
+        @include screenMax768 {
+            text-align: left;
+            grid-row: 1;
+            grid-column: 1/ span 3;
+        }
+    }
+    button {
+        background-color: $white;
+        border-radius: 0%;
+        border: solid $black .1rem;
+        padding: .5rem 4rem;
+        text-transform: uppercase;
+        font-family: $bodyTextFont;
+        letter-spacing: .1rem;
+        transition: .3s;
+        display: inline-block;
+        cursor: pointer;
+        width: fit-content;
+        margin: 0 auto;
+        @include screenMax768 {
+            grid-row: 1;
+            grid-column: 4/ span 1;
+        }
+        &:hover {
+            background-color: $black;
+            border: solid $white .1rem;
+            color: $white;
+        }
+    }
+}

@@ -1,7 +1,6 @@
 /* SERVICES */
 
 
-
 /* ABOUT SECTION */
 .interactive {
     margin-top: 8rem;
@@ -67,9 +66,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    gap: 2rem;
     @include screenMax768 {
+        gap: 3rem;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 6fr 6fr;
+        grid-template-rows: 1fr min(50rem) min(50rem);
     }
     h2 {
         text-transform: uppercase;
@@ -94,14 +95,105 @@
         cursor: pointer;
         width: fit-content;
         margin: 0 auto;
+        grid-row: 10;
         @include screenMax768 {
+            justify-self: end;
             grid-row: 1;
             grid-column: 4/ span 1;
+            margin: 0;
         }
         &:hover {
             background-color: $black;
             border: solid $white .1rem;
             color: $white;
+        }
+    }
+    div {
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        transition: .3s;
+        min-height: 20rem;
+        background-position: center top;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            background-color: $white;
+            opacity: 0;
+            z-index: 1;
+            transition: .3s;
+        }
+        &:hover::after {
+            opacity: .5;
+        }
+        a {
+            color: $white;
+            display: inline-block;
+            position: relative;
+            z-index: 3;
+            transition: .3s;
+            padding: 2rem;
+            font-size: 2rem;
+            @include screenMax768 {
+                font-size: 3rem;
+                padding: 3rem;
+            }
+        }
+        &:hover a {
+            color: $black;
+        }
+
+    }
+    &-deepearth {
+        background-image: url(../../images/mobile/image-deep-earth.jpg);
+        @include screenMax768 {
+            background-image: url(../../images/desktop/image-deep-earth.jpg);
+        }
+    }
+    &-nightarcade {
+        background-image: url(../../images/mobile/image-night-arcade.jpg);
+        @include screenMax768 {
+            background-image: url(../../images/desktop/image-night-arcade.jpg);
+        }
+    }
+    &-soccerteam {
+        background-image: url(../../images/mobile/image-soccer-team.jpg);
+        @include screenMax768 {
+            background-image: url(../../images/desktop/image-soccer-team.jpg);
+        }
+    }
+    &-thegrid {
+        background-image: url(../../images/mobile/image-grid.jpg);
+        @include screenMax768 {
+            background-image: url(../../images/desktop/image-grid.jpg);
+        }
+    }
+    &-fromup {
+        background-image: url(../../images/mobile/image-from-above.jpg);
+        @include screenMax768 {
+            background-image: url(../../images/desktop/image-from-above.jpg);
+        }
+    }
+    &-pocketborealis {
+        background-image: url(../../images/mobile/image-pocket-borealis.jpg);
+        @include screenMax768 {
+            background-image: url(../../images/desktop/image-pocket-borealis.jpg);
+        }
+    }
+    &-curiosity {
+        background-image: url(../../images/mobile/image-curiosity.jpg);
+        @include screenMax768 {
+            background-image: url(../../images/desktop/image-curiosity.jpg);
+        }
+    }
+    &-makeit {
+        background-image: url(../../images/mobile/image-fisheye.jpg);
+        @include screenMax768 {
+            background-image: url(../../images/desktop/image-fisheye.jpg);
         }
     }
 }

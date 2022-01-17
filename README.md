@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://codepen.io/viktoriiazaichuk/pen/Jjrzvra
 
 ## My process
 
@@ -27,7 +27,5 @@ Users should be able to:
 - Vanilla JavaScript
 
 
-### What I learned
 
-...
 
